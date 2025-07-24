@@ -4,7 +4,7 @@ import {
   StaticParamList,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Camera, Home } from '../screens';
+import { Camera, Home } from '@/screens';
 
 const RootStack = createNativeStackNavigator({
   screens: {

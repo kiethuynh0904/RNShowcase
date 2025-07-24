@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { RootStackParamList } from '../navigation/AppNavigator';
+import { RootStackParamList } from '@/navigation/AppNavigator';
 import { useNavigation } from '@react-navigation/native';
 
 type Feature = {

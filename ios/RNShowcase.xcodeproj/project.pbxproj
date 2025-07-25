@@ -10,8 +10,10 @@
 		0C80B921A6F3F58F76C31292 /* libPods-RNShowcase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-RNShowcase.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		5A6E9631F7D1FC7EA4BDD7F8 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		703578C5CD9B44158B3A03FF /* FaceDetectorFrameProcessorPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F6B09AE06436B89214FA9 /* FaceDetectorFrameProcessorPlugin.swift */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F0941E9A8A2241A1A7713323 /* FaceDetectorFrameProcessorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C3A2A90919D948CE9A0D7160 /* FaceDetectorFrameProcessorPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,9 @@
 		5709B34CF0A7D63546082F79 /* Pods-RNShowcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNShowcase.release.xcconfig"; path = "Target Support Files/Pods-RNShowcase/Pods-RNShowcase.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-RNShowcase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNShowcase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RNShowcase/AppDelegate.swift; sourceTree = "<group>"; };
+		7E7F6B09AE06436B89214FA9 /* FaceDetectorFrameProcessorPlugin.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = FaceDetectorFrameProcessorPlugin.swift; path = FaceDetectorFrameProcessorPlugin.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RNShowcase/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3A2A90919D948CE9A0D7160 /* FaceDetectorFrameProcessorPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FaceDetectorFrameProcessorPlugin.m; path = FaceDetectorFrameProcessorPlugin.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -39,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BD534C036E74854B7A8EEF6 /* FaceDetectorFrameProcessorPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				C3A2A90919D948CE9A0D7160 /* FaceDetectorFrameProcessorPlugin.m */,
+				7E7F6B09AE06436B89214FA9 /* FaceDetectorFrameProcessorPlugin.swift */,
+			);
+			name = FaceDetectorFrameProcessorPlugin;
+			path = FaceDetectorFrameProcessorPlugin;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* RNShowcase */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +89,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				0BD534C036E74854B7A8EEF6 /* FaceDetectorFrameProcessorPlugin */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -247,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				F0941E9A8A2241A1A7713323 /* FaceDetectorFrameProcessorPlugin.m in Sources */,
+				703578C5CD9B44158B3A03FF /* FaceDetectorFrameProcessorPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +397,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -449,7 +469,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
